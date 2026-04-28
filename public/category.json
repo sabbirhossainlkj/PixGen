@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "SciFi",
+    "slug": "Sci-Fi"
+  },
+  {
+    "id": 2,
+    "name": "Fantasy",
+    "slug": "Fantasy"
+  },
+  {
+    "id": 3,
+    "name": "Cyberpunk",
+    "slug": "Cyberpunk"
+  },
+  {
+    "id": 4,
+    "name": "Portrait",
+    "slug": "Portrait"
+  },
+  {
+    "id": 5,
+    "name": "Minimal",
+    "slug": "Minimal"
+  },
+  {
+    "id": 6,
+    "name": "Nature",
+    "slug": "Nature"
+  },
+  {
+    "id": 7,
+    "name": "Space",
+    "slug": "Space"
+  },
+  {
+    "id": 8,
+    "name": "Abstract",
+    "slug": "Abstract"
+  },
+  {
+    "id": 9,
+    "title": "Automobile",
+    "slug": "Automobile"
+  },
+  {
+    "id": 10,
+    "title": "Tech",
+    "slug": "Tech"
+  },
+  {
+    "id": 11,
+    "title": "Animals",
+    "slug": "Animals"
+  }
+]

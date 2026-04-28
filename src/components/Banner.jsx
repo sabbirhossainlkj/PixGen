@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <section  className="relative bg-[url('/cpt.jpg')]  bg-cover flex items-center justify-center h-[70vh]  from-purple-700 via-blue-600 to-indigo-700 text-white overflow-hidden">
+    <section  className="relative rounded-2xl bg-[url('/cpt.jpg')]  bg-cover flex items-center justify-center h-[70vh]  from-purple-700 via-blue-600 to-indigo-700 text-white overflow-hidden">
 
       <div className="text-center z-10 px-4">
         <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">

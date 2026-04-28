@@ -7,7 +7,7 @@ const TopGenerations = async () => {
   const photoCut = photos.slice(0, 8);
 
   return (
-    <div className="my-10 border-2 p-2">
+    <div className="my-10 p-2">
         <h2 className="text-3xl font-bold mb-4">Top Generations</h2>
       <div className="grid grid-cols-4 gap-2">
         {photoCut.map((photo) => {

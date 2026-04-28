@@ -3,7 +3,6 @@ import PhotoCard from "@/components/PhotoCard";
 const AllPhotos = async () => {
   const res = await fetch("https://pix-gen-five.vercel.app/data.json");
   const photos = await res.json();
-  console.log(photos, "all photos");
   return (
     <div className="my-9">
       <h2 className="text-2xl font-bold my-4">all photos</h2>

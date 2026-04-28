@@ -1,8 +1,13 @@
+'use client'
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
 import { Button } from "@heroui/react";
+import { usePathname } from "next/navigation";
+
 const Navbar = () => {
+  const pathname = usePathname();
+
   return (
     <div className="border p-2 flex justify-between items-center shadow-2xl">
       <div className="flex items-center gap-2">
@@ -12,13 +17,34 @@ const Navbar = () => {
       <div>
         <ul className="font-bold text-xl flex items-center gap-3">
           <li>
-            <Link href={'/'}>Home</Link>
+            <Link
+              href="/"
+              className={pathname === "/" ? "text-blue-500 underline" : ""}
+            >
+              Home
+            </Link>
           </li>
+
           <li>
-            <Link href={'/'}>All Photos</Link>
+            <Link
+              href="/AllPhotos"
+              className={
+                pathname === "/AllPhotos" ? "text-blue-500 underline" : ""
+              }
+            >
+              All Photos
+            </Link>
           </li>
+
           <li>
-            <Link href={'/'}>Profile</Link>
+            <Link
+              href="/Profile"
+              className={
+                pathname === "/Profile" ? "text-blue-500 underline" : ""
+              }
+            >
+              Profile
+            </Link>
           </li>
         </ul>
       </div>

@@ -49,8 +49,12 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="flex gap-3 items-center">
-        <Button variant="outline">SingIn</Button> <br />
-        <Button variant="outline">SingUp</Button>
+        <Link href={'/singup'}>
+        <Button variant="outline">SingUp</Button> 
+        </Link>
+        <Link href={'/singin'}>
+        <Button variant="outline">SingIn</Button> 
+        </Link>
       </div>
     </div>
   );

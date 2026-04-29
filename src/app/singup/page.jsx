@@ -51,7 +51,7 @@ const signUpPage = () => {
 
         <TextField isRequired name="image" type="text">
           <Label>Image URL</Label>
-          <Input placeholder="Image URL" />
+          <Input placeholder="Image Url" />
           <FieldError />
         </TextField>
 

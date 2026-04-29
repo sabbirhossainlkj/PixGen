@@ -10,7 +10,7 @@ const Banner = () => {
         <p className="mt-4 text-xl md:text-2xl text-gray-200">Explore AI Art</p>
 
         <p className="mt-2 text-sm text-gray-300 max-w-xl mx-auto">
-          Turn your imagination into stunning AI-generated images in seconds.
+          Turn your Create Imagine Generate imagination  into stunning AI-generated images in seconds.
         </p>
 
         <div className="mt-6 flex justify-center gap-4">

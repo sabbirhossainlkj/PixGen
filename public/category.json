@@ -41,17 +41,17 @@
   },
   {
     "id": 9,
-    "title": "Automobile",
+    "name": "Automobile",
     "slug": "Automobile"
   },
   {
     "id": 10,
-    "title": "Tech",
+    "name": "Tech",
     "slug": "Tech"
   },
   {
     "id": 11,
-    "title": "Animals",
+    "name": "Animals",
     "slug": "Animals"
   }
 ]

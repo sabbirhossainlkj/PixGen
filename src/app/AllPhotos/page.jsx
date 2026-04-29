@@ -1,11 +1,15 @@
+import Category from "@/components/Category";
 import PhotoCard from "@/components/PhotoCard";
 
-const AllPhotos = async () => {
+const AllPhotos = async ({ searchParams }) => {
+  const { category } = await searchParams;
   const res = await fetch("https://pix-gen-five.vercel.app/data.json");
   const photos = await res.json();
+  const filterdPhotos = category ? photos.filter((photo) => photo.category.toLowerCase() == category.toLowerCase()) : photos;
   return (
     <div className="my-9">
       <h2 className="text-2xl font-bold my-4">all photos</h2>
+      <Category></Category>
       <div className="grid grid-cols-4 gap-4">
         {photos.map((photo) => {
           return <PhotoCard key={photo.id} photo={photo}></PhotoCard>;

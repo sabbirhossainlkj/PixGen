@@ -11,9 +11,10 @@ import {
   TextField,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { AiFillGoogleCircle } from "react-icons/ai";
 
 const signUpPage = () => {
-        const router = useRouter();
+  const router = useRouter();
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -34,11 +35,19 @@ const signUpPage = () => {
       email,
       password,
     });
-    console.log({data, error})
-    if(!error){
-        router.push('/')
+    console.log({ data, error });
+    if (!error) {
+      router.push("/");
     }
   };
+
+  //   google authentication function
+  const handleGoogleSingUp = async () => {
+    await authClient.signUp.social({
+      provider: "google",
+    });
+  };
+
   return (
     <div className="w-6/12 space-y-4 mx-auto my-6 border p-6 shadow-2xl py-9 rounded-2xl">
       <h2 className="text-xl font-bold text-center">singUp page</h2>
@@ -112,6 +121,15 @@ const signUpPage = () => {
           </Button>
         </div>
       </Form>
+      <p className="text-2xl font-bold text-center text-gray-400">or</p>
+      <Button
+        onClick={handleGoogleSingUp}
+        variant="primary"
+        className={"w-full text-xl"}
+      >
+        <AiFillGoogleCircle />
+        Sing In with google
+      </Button>
     </div>
   );
 };

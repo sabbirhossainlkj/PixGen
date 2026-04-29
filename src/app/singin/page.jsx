@@ -10,6 +10,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import { AiFillGoogleCircle } from "react-icons/ai";
 
 const signInPage = () => {
   const onSubmit = async (e) => {
@@ -30,6 +31,14 @@ const signInPage = () => {
     });
     console.log({ data, error });
   };
+
+  //   google authentication function
+  const handleGoogleSingIn = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
+
   return (
     <div className="w-6/12 space-y-4 mx-auto my-6 border p-6 shadow-2xl py-9 rounded-2xl">
       <h2 className="text-xl font-bold text-center">singIn page</h2>
@@ -75,7 +84,7 @@ const signInPage = () => {
           </Description>
           <FieldError />
         </TextField>
-        <div className="flex flex-col gap-3">
+        <div className="flex justify-between items-center gap-3">
           <Button
             className={"w-full text-white text-md font-bold bg-taupe-700"}
             type="submit"
@@ -91,6 +100,11 @@ const signInPage = () => {
           </Button>
         </div>
       </Form>
+      <p className="text-2xl font-bold text-center text-gray-400">or</p>
+      <Button onClick={handleGoogleSingIn} variant="primary" className={"w-full text-xl"}>
+        <AiFillGoogleCircle />
+        Sing In with google
+      </Button>
     </div>
   );
 };
